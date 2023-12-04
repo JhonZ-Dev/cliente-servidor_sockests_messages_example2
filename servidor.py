@@ -12,3 +12,7 @@ print(f"Cliente conectado desde {addr[0]}:{addr[1]}")
 # Recibir datos del cliente
 data = client_socket.recv(1024)
 print(f"Mensaje recibido del cliente: {data.decode('utf-8')}")
+
+# Responder al cliente
+response = "Mensaje recibido correctamente"
+client_socket.send(response.encode('utf-8'))
