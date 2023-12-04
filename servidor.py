@@ -16,3 +16,6 @@ print(f"Mensaje recibido del cliente: {data.decode('utf-8')}")
 # Responder al cliente
 response = "Mensaje recibido correctamente"
 client_socket.send(response.encode('utf-8'))
+# Cerrar la conexión con el cliente y el servidor
+client_socket.close()
+server.close()
