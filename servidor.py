@@ -9,3 +9,6 @@ print(f"Servidor escuchando en {host}:{port}")
 # Esperar a que un cliente se conecte
 client_socket, addr = server.accept()
 print(f"Cliente conectado desde {addr[0]}:{addr[1]}")
+# Recibir datos del cliente
+data = client_socket.recv(1024)
+print(f"Mensaje recibido del cliente: {data.decode('utf-8')}")
