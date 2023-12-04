@@ -5,3 +5,4 @@ port = 12345
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 server.listen(5)
+print(f"Servidor escuchando en {host}:{port}")
